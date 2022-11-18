@@ -27,13 +27,15 @@ public class triangle {
     public static void acceptInput() {
         System.out.print("Choose mode - \n1) X mode\n2) Number Mode\n-->");
         Scanner input = new Scanner(System.in);
+        // this is for mode input
         Global.mode = Integer.parseInt(input.nextLine());
         System.out.print("Enter the number of stars - ");
+        // this is for number input
         Scanner inputrow = new Scanner(System.in);
         String amount = inputrow.nextLine();
         try{
-            if(Integer.parseInt(amount) <= 0){
-                System.out.println("Please use number larger than 0");
+            if(Integer.parseInt(amount) <= 0 || Integer.parseInt(amount) >= 10){
+                System.out.println("Please use number larger than 0 and less then 9");
                 acceptInput();
             }else{
                 Global.number = Integer.parseInt(amount);
@@ -87,7 +89,7 @@ public class triangle {
         System.out.println("\\___Reversed Triangle___/\n");
         for (int i = 1; i <= am; i++) {
             for (int j = 1; j <= am - (i - 1); j++) {
-                if(m==2){
+                if(m==1){
                     System.out.print("x ");
                 }else{
                     System.out.print(i+" ");
