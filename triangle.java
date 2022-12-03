@@ -25,15 +25,19 @@ public class triangle {
 
     //accept input here
     public static void acceptInput() {
+        try{
         System.out.print("Choose mode - \n1) X mode\n2) Number Mode\n-->");
         Scanner input = new Scanner(System.in);
         // this is for mode input
-        Global.mode = Integer.parseInt(input.nextLine());
+        try{
+            Global.mode = input.nextInt();
+        }catch(Exception e){
+            input.next();
+        }
         System.out.print("Enter the number of stars - ");
         // this is for number input
         Scanner inputrow = new Scanner(System.in);
         String amount = inputrow.nextLine();
-        try{
             if(Integer.parseInt(amount) <= 0 || Integer.parseInt(amount) >= 10){
                 System.out.println("Please use number larger than 0 and less then 9");
                 acceptInput();
