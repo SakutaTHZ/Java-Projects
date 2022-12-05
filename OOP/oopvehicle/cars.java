@@ -1,4 +1,4 @@
-package OOP.oopvehickle;
+package OOP.oopvehicle;
 
 public class cars extends Vehicles {
 
@@ -8,11 +8,11 @@ public class cars extends Vehicles {
     }
 
     void getColor() {
-        System.out.println("Car Color Unknown");
+        System.out.println("Car Color White");
     }
 
     void getBrandName() {
-        System.out.println("Car Brandname Unknown");
+        System.out.println("Car Brandname Toyota");
     }
     
     public static void main(String[] args) {

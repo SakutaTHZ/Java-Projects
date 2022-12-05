@@ -1,4 +1,4 @@
-package p5;
+package Collections;
 
 class generic<T>{
     T obj;
@@ -8,9 +8,9 @@ class generic<T>{
     }
 
     public void print(){
-        System.out.println("Before - "+obj+" "+obj.getClass().getSimpleName());
+        System.out.println("Before - "+obj+" |"+obj.getClass().getSimpleName());
         obj = (T) obj.toString();
-        System.out.println("After - "+obj+" "+obj.getClass().getSimpleName());
+        System.out.println("After - "+obj+" |"+obj.getClass().getSimpleName());
     }
 }
 

@@ -17,7 +17,8 @@ public class Ford extends Car{
     }
 
     double getSalePrice(int manufaacturerDiscount){
-        return (int) regularPrice - manufacturerDiscount;
+        System.out.println("Manufacturer Discount - " + manufaacturerDiscount);
+        return (int) (regularPrice - manufaacturerDiscount);
     }
     
 }

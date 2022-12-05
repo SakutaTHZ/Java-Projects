@@ -1,4 +1,4 @@
-package p5;
+package Collections;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -42,16 +42,15 @@ class StudentData{
 
 public class Student {
     public static void main(String[] args) {  
-        
-        ArrayList<StudentData> arraylist = new ArrayList(); 
-        LinkedList<StudentData> linklist = new LinkedList();
+        ArrayList<StudentData> arraylist = new ArrayList<StudentData>(); 
+        LinkedList<StudentData> linklist = new LinkedList<StudentData>();
         generateStudents(arraylist,linklist);
         showArrayList(arraylist);
         showLinkedList(linklist);
     }
 
     private static void showLinkedList(LinkedList<StudentData> linklist) {
-        System.out.println("\n_____\nArrayList");
+        System.out.println("___________\nArrayList\n");
         for (StudentData al : linklist) {
             if(al.getAge()>20){
                 System.out.println(al.getName() + " is "+ al.getAge() +" years old" );
@@ -60,8 +59,7 @@ public class Student {
     }
 
     private static void showArrayList( ArrayList<StudentData> arraylist) {
-        // for specific data
-        System.out.println("\n_____\nLinkedList");
+        System.out.println("___________\nLinkedList\n");
         for (StudentData al : arraylist) {
             if(al.getAge()<20){
                 System.out.println(al.getName() + " is "+ al.getAge() +" years old" );

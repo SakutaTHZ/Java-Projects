@@ -1,4 +1,4 @@
-package OOP.oopvehickle;
+package OOP.oopvehicle;
 /* 
 Create a Abstract class Vehicles,
 Write abstract methods of getType, getColor, getBrandName

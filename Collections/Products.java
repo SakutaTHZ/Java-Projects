@@ -1,8 +1,6 @@
-package p5;
+package Collections;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Map.Entry;
@@ -48,7 +46,7 @@ public class Products {
         showHashmap(map);
 
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("Search Item - ");
+            System.out.println("\nSearch Item - ");
             String search = scanner.nextLine();
             if(map.get(search)==null){
                 System.out.println("No data found");

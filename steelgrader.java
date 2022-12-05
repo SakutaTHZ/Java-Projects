@@ -20,14 +20,16 @@ public class steelgrader {
         generateData(hardness,carbon,tensile);
     }
 
+    //check da quality
     private static void qualityCheck(int hardness, double carbon, int tensile) {
         int checker = 0; 
         checker = hardness > 50 ? checker+2 : checker+0;
         checker = carbon < 0.7 ? checker+3 : checker+0;
         checker = tensile > 5600 ? checker+4 : checker+0;
+        System.out.println("Hardness value "+hardness+" > 50 ? ( "+ (hardness > 50 ? ":) )" : ":( )") + "\nCarbon Value "+carbon+" < 0.7 ? ( "+ (carbon < 0.7 ? ":) )" : ":( )") + "\nTensile Value "+tensile+" > 5600 ? ( "+ (tensile > 5600 ? ":) )" : ":( )\n\n"));
         switch (checker) {
             case 0:
-                System.out.println("This Steel is Grade 5");
+                System.out.println("No Conditions Met\nThis Steel is Grade 5");
                 break;
             case 6:
                 System.out.println("This Steel is Grade 7");
@@ -47,12 +49,13 @@ public class steelgrader {
         }
     }
 
+    //Generate data
     private static void generateData(int hardness, double carbon, int tensile) {
         Random random = new Random();
         hardness = random.nextInt(100);
         carbon = Math.round(0.0 + (1.0 - 0.0) * random.nextDouble()* 10.0) / 10.0;
         tensile = random.nextInt(10000);
-        System.out.println("Hardness - "+hardness+"\nCarbon - "+carbon+"\nTensile - "+tensile);
+        System.out.println("Hardness - "+hardness+"\nCarbon - "+carbon+"\nTensile - "+tensile+"\n");
          
         qualityCheck(hardness,carbon,tensile); 
     }
